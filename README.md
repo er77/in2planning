@@ -11,4 +11,4 @@ After that register plugin in Excel options.
 
  Oracle SmartView also must be installed before setting up this plugin.
  
- it is free tool unders BSD license 
+ it is free programm  under BSD license 
