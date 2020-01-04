@@ -1,0 +1,103 @@
+<?xml version="1.0" standalone="yes"?>  
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="p_OnRibbonLoad">
+	<ribbon startFromScratch="false">
+		<tabs>
+			<!-- er@essbase.ru   Free Under BSD license     -->
+			<tab id="OHPL" label="in2planning"   visible="true"  keytip="YQA" >
+				<group id="grp_Main0" label=" v1.0"   >			                             				 					    					  
+   					      <button id="b_QuickConnectPROD"  label="Connect Panel"  onAction="p_ShowPanel"  imageMso="DatabasePermissionsMenu" size = "large"    /> 
+
+			              <button id="b_BackOutl"    label="Outline"  onAction="p_BackOutl" imageMso="DiagramReverseClassic"    />                            	 
+                          <button id="b_AutoFilter"  label="Filter"   onAction="p_AutoFilter" imageMso="AutoFilterClassic"    />                            	 
+                          <button id="b_FreezePanes" label="Freeze"   onAction="p_FreezePanes" imageMso="FreezePanes"    />                            	                              
+				</group>				
+
+				    <group id="grp_Adhoc" label="Adhoc Tools"   >                            
+                              <button id="b_Pivot" label="Pivot"   onAction="p_Pivot" imageMso="PivotSwitchRowColumn" size="large"  />                           
+					           <button id="b_ZoomIn"  label="Zoom In"    onAction="p_ZoomIn" imageMso="OutlineGroup"   />
+                               <button id="b_ZoomOut" label="Zoom Out"   onAction="p_ZoomOut" imageMso="OutlineUngroup"    />															
+					           <button id="p_POVManager" label="PoV"   onAction="p_POVManager" imageMso="MailMergeDocument"    />	  
+                            <separator id="grp_Adhoc01"/>
+                              <button id="b_MemberSelect" label="Member Select"    onAction="p_MemberSelect" imageMso="ReturnToTaskList"  size="large"    />
+                               <button id="b_KeepOnly"     label="Keep Only"    onAction="p_KeepOnly" imageMso="PageBreakInsertOrRemove"    />
+                               <button id="b_RemoveOnly"   label="Remove "   onAction="p_RemoveOnly" imageMso="TableRowsDelete"    />  					
+                               <button id="b_Attributes"   label="Attribute"    onAction="p_Attributes"   imageMso="AdpDiagramAddRelatedTables"    /> 
+                          </group>    
+
+				<group id="grp_Refresh" label="Refresh"   >	                   
+                              <button id="b_Retrieve" label="Refresh"    onAction="p_Retrieve"  imageMso="DataRefreshAll"  size="large" />   
+                              <button id="b_undo" label="undo"   onAction="p_Undo"   imageMso="Undo"    />
+                              <button id="b_redo" label="redo"   onAction="p_Redo"   imageMso="Redo"    />
+                     
+					<separator id="grp_Refresh02"/>
+                              <button id="esb_setAliasTable" label="Change Alias"   onAction="p_setAliasTable"  imageMso="FormControlEditBox" size="large"        />                           
+					<dropDown id="mn_Supr" label=" Hide:"   getSelectedItemID="p_getSelectedItemID" onAction="p_onAction" sizeString="WWWWW"   >						
+                              <item id="mn_Supr2" label="#Missing Rows"/>
+                              <item id="mn_Supr1" label="#Missing Block"/>
+				      <item id="mn_Supr6" label="Show All"/>					
+										
+					</dropDown>
+
+					<dropDown id="mn_Zoom" label="Zoom:"   getSelectedItemID="p_getSelectedItemID" onAction="p_onAction" sizeString="WWWWW"   >
+						<item id="mn_Zoom0" label="Bottom level"/>
+						<item id="mn_Zoom1" label="Next level"/>
+						<item id="mn_Zoom2" label="All level"/>
+					</dropDown>
+
+                        <separator id="grp_Options01a"/>
+
+                    <dropDown id="mn_Selection" label=" Selection: "  getSelectedItemID="p_getSelectedItemID" onAction="p_onAction" sizeString="WWWW"   >
+						<item id="mn_Selection0" label="Include"/>
+						<item id="mn_Selection1" label="Exclude"/>
+					</dropDown>       
+
+					<dropDown id="mn_Show" label="    Display:"    getSelectedItemID="p_getSelectedItemID" onAction="p_onAction" sizeString="WWWW"    >						
+						<item id="mn_Show1" label="Name or Code"/>                                    
+						<item id="mn_Show2" label="Code and Name"/>
+					</dropDown>   
+
+                     <dropDown id="mn_Intend" label="     Indent: "   getSelectedItemID="p_getSelectedItemID" onAction="p_onAction" sizeString="WWWW"    >
+						 <item id="mn_Intend0" label="None"/>						
+                         <item id="mn_Intend2" label="Totals"/>					
+						 <item id="mn_Intend1" label="Sub Items"/>	
+					</dropDown> 
+				        
+				</group>
+
+			     <group id="grp_RData" label="Report and Calc   "    >                                                
+                     
+                     <button id="b_CalculationPlanning" label="Calculation Rules"   onAction="p_CalculationPlanning"  imageMso="PivotTableOlapTools"  size="large"  />
+                     <button id="b_CalculationPlanningForms"  label="Rules on Form"     onAction="p_CalculationForms" imageMso="PivotTableOlapTools"   /> 
+                     <button id="b_QueryDesigner"      label="Query" onAction="p_QueryDesigner" imageMso="BusinessFormWizard"     />       
+                              
+                 </group> 
+
+				<group id="grp_SubmitData" label= "Tools"       >
+                          <button id="b_SubmitData" label="Submit data"   imageMso="DatabaseMoveToSharePoint" onAction="p_SubmitData"  size = "large"    /> 
+				          <button id="b_CopySheet" label="Copy Sheet"   onAction="p_CopySheetUI" imageMso="Copy"     />                       
+				          <button id="b_FastSubmitData" label="Sbmt. wo refr."  onAction="p_SubmitDataVORefresh"  imageMso="DatabaseMoveToSharePoint"        />   	
+                           
+ 				   <menu id="m_CellInfo" label="Cell Properties"   imageMso="FileCompactAndRepairDatabase"  >      
+                           <button id="b_CellInfoComments"          label="Comments"            onAction="p_CellInfoComments"           imageMso="ControlTitle" />  
+                           <button id="b_CellInfoSupportingDetail"  label="Supporting Detail"   onAction="p_CellInfoSupportingDetail"   imageMso="TextBoxInsert" /> 
+                           <button id="b_CellInfoAttachmnet"        label="Attachment"          onAction="p_CellInfoAttachmnet"         imageMso="ReviewAcceptChange"    /> 	
+                           <button id="b_CellInfoHistory"           label="Cell History"        onAction="p_CellInfoHistory"            imageMso="HeaderFooterPageNumberInsert"    /> 	
+                    </menu>
+               </group> 
+
+				<group id="grp_AdditionalService" label="Service"     >  
+                           <button id="b_Options"      label="Options"            onAction="p_Options"      imageMso="PageMenu" size="large"   />                          
+                           <button id="b_HypMenuVFunctionBuilder" label="HSV.Func"   onAction="p_HypMenuVFunctionBuilder" imageMso="FunctionLookup"     />                                     
+                           <button id="b_Connections"  label="Classic SV"  onAction="p_Connections"  imageMso="BlogHomePage"    keytip="YQW"  />                               
+                           <button id="b_SheetInfo"   label="Connect Info"  onAction="p_SheetInfo"     imageMso="SignatureLineInsert" /> 
+				           <button id="b_Disconnect"  label="Disconnect"    onAction="p_Disconnect"    imageMso="InkDeleteAllInk" /> 
+		 	               <button id="b_about"    label="About"    onAction="p_About"    imageMso="AccessFormWizard"      /> 
+		 	               <button id="b_about2"   label="Sponsor"  onAction="p_About2"   imageMso="SizeToGridOutlook"      />     
+                </group> 
+  	               
+
+			</tab>
+		</tabs>
+	</ribbon>
+	<!-- er@essbase.ru -->
+</customUI>
