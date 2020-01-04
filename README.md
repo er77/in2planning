@@ -10,3 +10,5 @@ For installing , please , unpack and place file in2planning.xlam in the folder
 After that register plugin in Excel options.
 
  Oracle SmartView also must be installed before setting up this plugin.
+ 
+ it is free tool unders BSD license 
