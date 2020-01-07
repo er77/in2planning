@@ -4,7 +4,7 @@
 		<tabs>
 			<!-- er@essbase.ru   Free Under BSD license     -->
 			<tab id="OHPL" label="in2planning"   visible="true"  keytip="YQA" >
-				<group id="grp_Main0" label=" v1.1"   >			                             				 					    					  
+				<group id="grp_Main0" label=" v1.2"   >			                             				 					    					  
    					      <button id="b_QuickConnectPROD"  label="Connect Panel"  onAction="p_in2plnShowPanel"  imageMso="DatabasePermissionsMenu" size = "large"    /> 
 
 			              <button id="b_BackOutl"    label="Outline"  onAction="p_in2plnBackOutl" imageMso="DiagramReverseClassic"    />                            	 
@@ -49,12 +49,7 @@
                     <dropDown id="mn_Selection" label=" Selection: "  getSelectedItemID="p_getSelectedItemID" onAction="p_in2plnonAction" sizeString="WWWW"   >
 						<item id="mn_Selection0" label="Include"/>
 						<item id="mn_Selection1" label="Exclude"/>
-					</dropDown>       
-
-					<dropDown id="mn_Show" label="    Display:"    getSelectedItemID="p_getSelectedItemID" onAction="p_in2plnonAction" sizeString="WWWW"    >						
-						<item id="mn_Show1" label="Name or Code"/>                                    
-						<item id="mn_Show2" label="Code and Name"/>
-					</dropDown>   
+					</dropDown>        
 
                      <dropDown id="mn_Intend" label="     Indent: "   getSelectedItemID="p_getSelectedItemID" onAction="p_in2plnonAction" sizeString="WWWW"    >
 						 <item id="mn_Intend0" label="None"/>						
